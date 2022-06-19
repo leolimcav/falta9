@@ -10,16 +10,15 @@ public class PlayerMovement : MonoBehaviour
     private GameObject playerObject;
     private Rigidbody2D rigidBody2D;
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        playerObject = GameObject.FindGameObjectsWithTag("Player")[0];
+        playerObject = GetComponent<GameObject>();  
         rigidBody2D = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        HandleJump();
         HandleMovement();
     }
 
@@ -31,13 +30,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleMovement()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        HandleJump();
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             rigidBody2D.velocity = new Vector2(-moveSpeed, rigidBody2D.velocity.y);
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.RightArrow))
             {
                 rigidBody2D.velocity = new Vector2(+moveSpeed, rigidBody2D.velocity.y);
             }
