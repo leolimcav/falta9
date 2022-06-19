@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 1261966860}
   - component: {fileID: 1261966859}
   - component: {fileID: 1261966858}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,3 +461,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpSpeed: 17
   moveSpeed: 20
+  platformLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
