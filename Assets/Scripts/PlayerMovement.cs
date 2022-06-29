@@ -5,8 +5,8 @@ using UnityEngine.TestTools;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float jumpSpeed = 0.2f;
-    public float moveSpeed = 5f;
+    public float jumpSpeed = 17f;
+    public float moveSpeed = 20f;
     [SerializeField] private LayerMask platformLayerMask;
     private GameObject playerObject;
     private Rigidbody2D rigidBody2D;
@@ -38,8 +38,14 @@ public class PlayerMovement : MonoBehaviour
             rigidBody2D.velocity = Vector2.up * jumpSpeed; 
     }
 
+    private void HandleRun()
+    {
+        moveSpeed = Input.GetKey(KeyCode.LeftShift) && IsGrounded() ? 40f : 20f;
+    }
+
     private void HandleMovement()
     {
+        HandleRun();
         HandleJump();
         if (Input.GetKey(KeyCode.LeftArrow))
         {
