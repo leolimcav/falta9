@@ -10,6 +10,8 @@ public class CameraFollow : MonoBehaviour
     void LateUpdate(){
         Vector3 newPosition = player.position;
         newPosition.z = -10;
+        newPosition.y = 7.72f;
+        
         
         transform.position = Vector3.Slerp(transform.position, newPosition, speed * Time.deltaTime);
     }
