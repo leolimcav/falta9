@@ -15,11 +15,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Fase1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/MenuFase2.unity
+    guid: e98faef75c130eb40b40d0ba4c3a9664
+  - enabled: 1
     path: Assets/Scenes/Cutscene2.unity
     guid: c206d26a54bb1aa44b8cc042b8ee0de1
   - enabled: 1
     path: Assets/Scenes/Fase2.unity
     guid: 5341f21100601ad4b8f28c074e28b49a
+  - enabled: 1
+    path: Assets/Scenes/MenuFase3.unity
+    guid: c008da7dd2455b345b97ff920156a0f6
   - enabled: 1
     path: Assets/Scenes/Cutscene3.unity
     guid: 34c40725d0f2e614a8ca703d3055850a
@@ -30,9 +36,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Cutscene4.unity
     guid: 6664f0e565aff7a41b7a8d25ec9faaad
   - enabled: 1
-    path: Assets/Scenes/MenuFase2.unity
-    guid: e98faef75c130eb40b40d0ba4c3a9664
+    path: Assets/Scenes/EndGame.unity
+    guid: 818daa2d4eb56c247857c88dad969e66
   - enabled: 1
-    path: Assets/Scenes/MenuFase3.unity
-    guid: c008da7dd2455b345b97ff920156a0f6
+    path: Assets/Scenes/Instructions.unity
+    guid: ec8ff4968b190994b8083efd9738f715
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 678b8ee9163df534bb1ce41040e359bc
   m_configObjects: {}
