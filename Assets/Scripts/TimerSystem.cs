@@ -50,7 +50,7 @@ public class TimerSystem : MonoBehaviour
   {
     if (clockString == "09:20")
     {
-      SceneManager.LoadScene("MainMenu");
+      SceneManager.LoadScene("GameOver");
     }
   }
 }

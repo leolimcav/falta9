@@ -389,9 +389,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!1 &859689134
-=======
 --- !u!82 &574751777
 AudioSource:
   m_ObjectHideFlags: 0
@@ -489,7 +486,6 @@ AudioSource:
     m_PostInfinity: 2
     m_RotationOrder: 4
 --- !u!1 &1324837029
->>>>>>> 337a1000019ec1f861a8e288c69c8c55e77be114
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
