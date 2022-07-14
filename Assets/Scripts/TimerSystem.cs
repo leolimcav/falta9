@@ -37,14 +37,8 @@ public class TimerSystem : MonoBehaviour
     MinuteHandTransform.eulerAngles = new Vector3(0, 0, minutePointerUpdate);
 
     var hourString = Mathf.Floor(dayNormalized * hoursPerDay).ToString("00");
-    Debug.Log($@"hour string {
-      hourString
-    }");
     var minutesPerHour = 60f;
     var minuteString = (((dayNormalized * hoursPerDay) % 1f) * minutesPerHour).ToString("00");
-    Debug.Log(@$"minute string{
-      minuteString
-    }");
 
     TimeText.text = $"{hourString}:{minuteString}";
   }

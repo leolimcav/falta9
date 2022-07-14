@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.TestTools;
 
@@ -58,7 +59,14 @@ public class PlayerMovement : MonoBehaviour
 
         facingRight = !facingRight;
     }
-    
+
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        if (!col.CompareTag("WaterPool")) return;
+        moveSpeed = 0.3f;
+        animate.speed = 0.5f;
+    }
+
     private bool IsGrounded()
     {
         var boxColliderBounds = boxCollider2D.bounds;
