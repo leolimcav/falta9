@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Vector3 = UnityEngine.Vector3;
 
 public class TimerSystem : MonoBehaviour
@@ -9,7 +10,6 @@ public class TimerSystem : MonoBehaviour
   private Transform HourHandTransform;
   private Transform MinuteHandTransform;
   private TextMeshProUGUI TimeText;
-
   private float day;
 
   public float startingHourAndMinute;
@@ -19,7 +19,6 @@ public class TimerSystem : MonoBehaviour
     HourHandTransform = transform.Find("HourClockHand");
     MinuteHandTransform = transform.Find("MinuteClockHand");
     TimeText = transform.Find("TimeText").GetComponent<TextMeshProUGUI>();
-
     MinuteHandTransform.eulerAngles = new Vector3(0, 0, startingMinutePointer);
   }
 
@@ -40,6 +39,18 @@ public class TimerSystem : MonoBehaviour
     var minutesPerHour = 60f;
     var minuteString = (((dayNormalized * hoursPerDay) % 1f) * minutesPerHour).ToString("00");
 
-    TimeText.text = $"{hourString}:{minuteString}";
+    var clockString = $"{hourString}:{minuteString}";
+    
+    TimeText.text = clockString;
+    HandleTimerEvent(clockString);
+  }
+
+
+  private static void HandleTimerEvent(string clockString)
+  {
+    if (clockString == "09:20")
+    {
+      SceneManager.LoadScene("MainMenu");
+    }
   }
 }
