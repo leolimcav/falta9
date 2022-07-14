@@ -10,7 +10,7 @@ public class StaminaSystem
   public StaminaSystem()
   {
     staminaAmount = STAMINA_MAX;
-    staminaRegenAmount = 5f;
+    staminaRegenAmount = 20f;
   }
 
   public void Update()
